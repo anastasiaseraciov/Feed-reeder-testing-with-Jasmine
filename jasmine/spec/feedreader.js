@@ -54,14 +54,17 @@ $(function() {
     /* TODO: Write a new test suite named "The menu" */
     describe('The menu', () => {
 
+        let body = $("body");
+        let callback = jasmine.createSpy("body", "toggleClass");
+
         /* TODO: Write a test that ensures the menu element is
          * hidden by default. You'll have to analyze the HTML and
          * the CSS to determine how we're performing the
          * hiding/showing of the menu element.
          */
         it('is hidden by default', () => {
-            let body = $("body");
             expect(body.hasClass("menu-hidden")).toBe(true);
+            expect(callback).not.toHaveBeenCalled();
         });
 
          /* TODO: Write a test that ensures the menu changes
@@ -69,6 +72,15 @@ $(function() {
           * should have two expectations: does the menu display when
           * clicked and does it hide when clicked again.
           */
+        it('changes visibility on menu icon click', () => {
+
+            if (callback.calls.count() % 2 === 0) {
+                expect(body.hasClass("menu-hidden")).toBe(true);
+            } else{
+                expect(body.hasClass("menu-hidden")).toBe(false);
+            }
+        });
+
     });
     /* TODO: Write a new test suite named "Initial Entries" */
 
