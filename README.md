@@ -2,7 +2,8 @@
 
 In this project I was given a web-based application that reads RSS feeds. The initial code with the [Jasmine](http://jasmine.github.io/) scripts installed was already given by UDACITY I had to finish the test suite.
 
-## Feed reeder testing LIVE https://anastasiaseraciov.github.io/Feed-reeder-testing-with-Jasmine/
+## Feed reeder testing LIVE 
+:point_right: https://anastasiaseraciov.github.io/Feed-reeder-testing-with-Jasmine/ :point_left:
 
 ## How to access the repository from a local machine:
 
